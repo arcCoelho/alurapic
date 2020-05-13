@@ -1,0 +1,24 @@
+<ol class="list-unstyled row">
+    
+    <li class="rows col-4"> ==={{rows.length}} ==={{photos.length}} </li>
+
+    <li *ngFor="let cols of rows" class="row">
+        <div *ngFor="let photo of cols" class="col-4">
+            <ap-photo
+                [url]="photo.url"
+                [description]="photo.description">
+            </ap-photo>
+        </div>
+    </li>
+
+    <li class="rows col-4"> ==={{rows.length}} ==={{photos.length}} </li>
+
+    <li *ngFor="let photo of photos" class="row">
+        <ap-photo
+            [url]="photo.url"
+            [description]="photo.description">
+        </ap-photo>
+    </li>
+
+</ol>
+
